@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get install -y nginx php5-fpm php5-gd curl && \
     rm -rf /var/lib/apt/lists/*
 
-ENV DOKUWIKI_VERSION 2014-09-29d
-ENV MD5_CHECKSUM 2bf2d6c242c00e9c97f0647e71583375
+ENV DOKUWIKI_VERSION 2015-08-10
+ENV MD5_CHECKSUM 675594518c378f43b32204c4b9073ffd
 
 RUN mkdir -p /var/www \
     && cd /var/www \
@@ -31,6 +31,7 @@ VOLUME [ \
     "/var/www/data/media_meta", \
     "/var/www/data/attic", \
     "/var/www/conf", \
+    "/var/www/lib/plugins", \
     "/var/log" \
 ]
 
